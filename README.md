@@ -46,7 +46,7 @@ Exposed API endpoints to accommodate scenarios where mobile app integration is r
 Ensured compatibility and seamless interaction with mobile applications by providing well-defined and documented APIs.
 
 ## API Documentation with Postman
-You can find the api documentation for the above solution specifically targeted for mobile client authentication [here](https://api.postman.com/collections/12541181-4ee284a8-9743-464a-b6c9-1f1436cb4ade?access_key=PMAT-01HRQ4HHF3Q33P18PXBM175YB6)
+You can find the api documentation for the above solution specifically targeted for mobile client authentication [here](https://api.postman.com/collections/12541181-4ee284a8-9743-464a-b6c9-1f1436cb4ade?access_key={access_key})
 
 ## Technologies / Libraries Used:
 
