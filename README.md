@@ -45,7 +45,7 @@ Inertia.js facilitates smooth transitions between pages while maintaining the be
 Exposed API endpoints to accommodate scenarios where mobile app integration is required.
 Ensured compatibility and seamless interaction with mobile applications by providing well-defined and documented APIs.
 
-## Technologies Used:
+## Technologies / Libraries Used:
 
 - Laravel
 - Spartie data package
