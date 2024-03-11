@@ -17,7 +17,7 @@ class InsuranceQuoteFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->word(),
+            'name' => fake()->unique()->word(),
             'sub_title' => fake()->sentence(5),
             'icon' => fake()->word()
         ];
