@@ -40,7 +40,7 @@ final class UserData extends Data
     {
         return self::from([
             ...$user->toArray(),
-        ]);
+        ])->except('password');
     }
 
     public static function rules(): array
