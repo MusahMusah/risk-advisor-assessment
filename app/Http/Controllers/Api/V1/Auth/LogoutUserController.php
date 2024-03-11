@@ -16,7 +16,7 @@ class LogoutUserController extends Controller
         return new ApiSuccessResponse(
             data: null,
             message: 'Logged out successfully!',
-            status: Response::HTTP_CREATED
+            status: Response::HTTP_OK
         );
     }
 }

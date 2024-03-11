@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\V1\Auth;
 
+use App\DataTransferObjects\UserData;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Responses\ApiSuccessResponse;
@@ -17,6 +18,8 @@ class LoginUserController extends Controller
      */
     public function __invoke(LoginRequest $request): ApiSuccessResponse
     {
+        $request->authenticate();
+
         $user = User::whereEmail($request->email)->first();
 
         if (! Hash::check($request->password, $user->password)) {
@@ -30,6 +33,7 @@ class LoginUserController extends Controller
         return new ApiSuccessResponse(
             data: [
                 'token' => $user->createToken('mobile')->plainTextToken,
+                'user' => UserData::from($user),
             ],
             message: 'Token created successfully',
             status: Response::HTTP_CREATED
