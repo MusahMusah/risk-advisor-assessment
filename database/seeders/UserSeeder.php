@@ -17,6 +17,8 @@ class UserSeeder extends Seeder
         // Create a Demo User
         $user = User::query()->create($this->getDemoUserData());
 
+        $user->consumer()->create([]);
+
         // Create a Consumer
         $submission = $user->submissions()->create($this->getSubmissionData());
 

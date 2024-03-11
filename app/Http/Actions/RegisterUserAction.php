@@ -27,6 +27,8 @@ class RegisterUserAction
                     'contact_preference' => $data->contact_preference,
                     'password' => Hash::make($data->password)
                 ]);
+
+                $user->consumer()->create([]);
             }
 
             $submission = $user->submissions()->create($data->submission->toArray());
